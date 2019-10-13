@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="manifest" href="manifest.json" />
+
+        <title>WebSocket Client</title>
+        <style></style>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="style.css"
+            media="screen"
+        />
+
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <div
+            style="display: flex; flex-direction: column; align-items: stretch; height: 100vh; max-height: 100vh;"
+        >
+            <div class="controls" style="flex-shrink: 0;">
+                <div
+                    class="container"
+                    style="display: flex; align-items: stretch;"
+                >
+                    <div style="flex-grow: 1;">
+                        <input
+                            id="address"
+                            class="input"
+                            type="text"
+                            value="ws://127.0.0.1:10180"
+                        />
+                    </div>
+                    <div style="flex-shrink: 0; padding-left: 30px;">
+                        <button class="connect" onclick="connect()">
+                            Connect
+                        </button>
+                        <button class="disconnect" onclick="disconnect()">
+                            Disconnect
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="container"
+                    style="display: flex; align-items: stretch;"
+                >
+                    <div style="flex-grow: 1;">
+                        <input id="message" class="input" type="text" />
+                    </div>
+                    <div style="flex-shrink: 0; padding-left: 30px;">
+                        <button class="send" disabled onclick="send()">
+                            Send
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div
+                style="height: 100%; flex-shrink: 1; width: 100%; padding: 0px 20px 20px 20px; overflow: hidden;"
+            >
+                <button class="clear" onclick="clearLog()">
+                    Clear
+                </button>
+                <div id="log" class="log">
+                    <strong
+                        style="text-align: center; display: inline-block; width: 100%;"
+                    >
+                        WebSocket Client v1.0 by Matthew_Cash</strong
+                    >
+                    <hr />
+                </div>
+            </div>
+        </div>
+        <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/sw.js').then(function() {
+                    console.log('Service Worker Registered');
+                });
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,133 @@
+html,
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #191a1b;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@media only screen and (min-width: 850px) {
+    .controls {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: stretch;
+    }
+}
+@media only screen and (max-width: 850px) {
+    .controls {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.container {
+    background-color: #212428;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 20px;
+    color: rgb(241, 241, 241);
+    font-family: sans-serif;
+    text-align: center;
+}
+
+@media only screen and (min-width: 850px) {
+    .container {
+        width: 100%;
+    }
+}
+.input {
+    background-color: #212428;
+    border-color: white;
+    border-radius: 20px;
+    padding: 5px 15px;
+    color: white;
+    appearance: none;
+    outline: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.connect {
+    color: white;
+    background-color: rgb(8, 155, 8);
+    border-radius: 20px;
+    border-width: 0px;
+    padding: 5px 15px;
+
+    appearance: none;
+    outline: 0;
+}
+.connect:hover {
+    background-color: rgb(27, 187, 27);
+}
+.connect:active {
+    background-color: rgb(77, 224, 77) !important;
+}
+.disconnect {
+    color: white;
+    background-color: rgb(155, 8, 8);
+    border-radius: 20px;
+    border-width: 0px;
+    padding: 5px 15px;
+
+    appearance: none;
+    outline: 0;
+
+    display: none;
+}
+.disconnect:hover {
+    background-color: rgb(218, 38, 38);
+}
+.disconnect:active {
+    background-color: rgb(216, 89, 89) !important;
+}
+.send {
+    color: white;
+    background-color: rgb(201, 184, 33);
+    border-radius: 20px;
+    border-width: 0px;
+    padding: 5px 15px;
+
+    appearance: none;
+    outline: 0;
+}
+.send:hover {
+    background-color: rgb(223, 208, 81);
+}
+.send:active {
+    background-color: rgb(231, 224, 161) !important;
+}
+.clear {
+    color: white;
+    background-color: rgb(155, 8, 8);
+    border-radius: 10px 0px 10px 0px;
+    border-width: 0px;
+    padding: 5px 15px;
+
+    appearance: none;
+    outline: 0;
+
+    position: relative;
+    top: 25px;
+}
+.clear:hover {
+    background-color: rgb(218, 38, 38);
+}
+.clear:active {
+    background-color: rgb(216, 89, 89) !important;
+}
+.log {
+    background-color: black;
+    border-radius: 10px;
+    overflow: scroll;
+    color: white;
+    font-family: monospace;
+    height: 100%;
+    max-height: 100%;
+    padding: 10px;
+    overflow-x: hidden;
+    word-wrap: break-word;
+}
