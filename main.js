@@ -14,7 +14,7 @@ function connect() {
         log('Connected', 'success');
     });
     ws.addEventListener('message', function(event) {
-        log(event.data.slice(1, -1), 'in');
+        log(event.data, 'in');
     });
 }
 function disconnect() {
