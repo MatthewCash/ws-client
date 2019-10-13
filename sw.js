@@ -32,7 +32,7 @@ workbox.precaching.cleanupOutdatedCaches();
 // Register route handlers for runtimeCaching
 
 workbox.routing.registerRoute(
-    new RegExp('/'),
+    new RegExp('/ws-client'),
     new workbox.strategies.NetworkFirst({}),
     'GET'
 );
