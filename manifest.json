@@ -2,7 +2,15 @@
     "name": "WebSocket Client",
     "short_name": "ws-client",
     "lang": "en-US",
-    "start_url": "/ws-client",
+    "start_url": "/ws-client/",
     "display": "standalone",
-    "theme_color": "#191a1b"
+    "theme_color": "#191a1b",
+    "icons": [
+        {
+            "src": "logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "background_color": "#191a1b"
 }
